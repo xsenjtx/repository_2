@@ -5,6 +5,7 @@ display: grid;
 grid-template-rows: 10% 80% 10%;
 height: 100vh;
 width: 100vw;
+font-size: 14px;
 }
 header {
     width: auto;
@@ -26,37 +27,31 @@ footer {
     width: auto;
 }
 .ramka {
-    width: 30%;
-    height: 50%;
+    width: 25vw;
+    height: 40vh;
     background: #FAF1FC;
     background: color(display-p3 0.973 0.945 0.984);
     border-radius: 20px;
     box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.2), 2px 2px 7px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     row-gap: 15px;
     justify-content: center;
     align-items: center;
+
     
 }
 .form {
     box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2);
-
-    transform: translateY(-30px);
     border-radius: 20px;
-    width: 90%;
-    height: 40px;
-    text-transform: translateY(10px);
+    width: 80%;
     background: #E3E5DE;
     background: color(display-p3 0.890 0.898 0.875);
     align-items: center;
     display: flex;
     padding: 0px 15px;
     gap: 10px;
-}
-label {
-    font-size: 14px;
+    max-height: 30%;
 }
 .input {
     appearance: none;
@@ -65,7 +60,7 @@ label {
     outline: none;
     background: none;
     font-size: 14px;
-    width: 110%;
+    width: 90%;
     font-family: inherit;
 }
 .button {
@@ -77,20 +72,59 @@ label {
     cursor: pointer;
     background-color: #928e99;
     color: rgb(29, 20, 20);
-    padding: 12px 24px;
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 600;
     transition: all 0.2s ease;
-    width: 30%;
-    transform: translateY(-20px);
+    width: 80%;
+    height: auto;
     box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-.flx {
-    display: flex;
-    width: 100%;
-    height: 15%;
-    justify-content: center;
-    gap: 20px;
+    min-height: 6vh;
 }
 
+.button:hover {
+    color: antiquewhite;
+}
+@font-face {
+    font-family: "Roboto";
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-variation-settings:
+    "wdth" 100;
+    font-dispaly: swap;
+    src: url(Roboto-Italic.woff2) format(woff2);
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+@media (max-width: 840px) {
+    .ramka {
+        width: 70vw;
+    }
+    .button {
+        max-width: 80%;
+    }
+}
+@media (max-height: 480px) {
+     .ramka {
+        width: 70vw;
+        height: 60vh;
+    }
+    .button {
+        max-width: auto;
+    }
+}
+@media (min-width: 1440px) {
+    .form {
+        height: 15%;
+    }
+    label {
+        font-size: 1.5rem;
+    }
+    .button {
+        font-size: 1.2rem;
+    }
+
+}
